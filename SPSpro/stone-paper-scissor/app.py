@@ -1,25 +1,16 @@
 from flask import Flask, render_template, request, redirect, url_for
 import csv
-import os
 import random
 
 app = Flask(__name__)
-
 CSV_FILE = "scores.csv"
-
-# Initialize CSV file if not exists
-if not os.path.exists(CSV_FILE):
-    with open(CSV_FILE, "w", newline="") as file:
-        writer = csv.writer(file)
-        writer.writerow(["Player", "Computer", "Result"])  # Header row
 
 def read_scores():
     scores = []
-    if os.path.exists(CSV_FILE):
-        with open(CSV_FILE, "r") as file:
-            reader = csv.DictReader(file)
-            for row in reader:
-                scores.append(row)
+    with open(CSV_FILE, "r") as file:
+        reader = csv.DictReader(file)
+        for row in reader:
+            scores.append(row)
     return scores
 
 def append_score(player, computer, result):
@@ -30,7 +21,7 @@ def append_score(player, computer, result):
 def reset_scores():
     with open(CSV_FILE, "w", newline="") as file:
         writer = csv.writer(file)
-        writer.writerow(["Player", "Computer", "Result"])
+        writer.writerow(["Player", "Computer", "Result"])  # Keep header
 
 @app.route("/", methods=["GET", "POST"])
 def index():
@@ -65,3 +56,4 @@ def index():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
