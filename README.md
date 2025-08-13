@@ -31,6 +31,3 @@
 <img width="1920" height="1080" alt="preview" src="https://github.com/user-attachments/assets/de4ba597-7b4f-4fcc-89da-282a4ab5f938" />
 
 
-
-**-------Preview--------**
-![Game Screenshot](static/preview.png)
