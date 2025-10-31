@@ -1,1 +1,11 @@
 Player,Computer,Result
+Stone,Paper,Computer Wins
+Paper,Paper,Draw
+Scissors,Stone,Computer Wins
+Paper,Stone,Player Wins
+Scissors,Stone,Computer Wins
+Stone,Stone,Draw
+Paper,Paper,Draw
+Scissors,Scissors,Draw
+Stone,Scissors,Player Wins
+Paper,Paper,Draw

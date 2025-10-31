@@ -1,0 +1,106 @@
+/* General body styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #ffecd2, #fcb69f);
+    color: #333;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Game container */
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 25px;
+    max-width: 600px;
+    margin: auto;
+    border-radius: 15px;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Title */
+h1 {
+    color: #ff6f61;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Game buttons */
+button {
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    border: none;
+    color: white;
+    padding: 12px 20px;
+    margin: 8px;
+    font-size: 18px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Reset button */
+.reset-btn {
+    background: linear-gradient(45deg, #ff512f, #dd2476);
+}
+
+/* Stats display */
+.stats {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f0f9ff;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.stats h3 {
+    color: #0077b6;
+    margin-bottom: 8px;
+}
+
+.stats p {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Result text */
+.result {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #444;
+}
+
+/* Table styling */
+table {
+    margin: 20px auto; /* Centers the table */
+    border-collapse: collapse;
+    width: 80%;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+}
+
+table th, table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+table th {
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    color: white;
+    font-size: 16px;
+}
+
+table tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+table tr:hover {
+    background: #ffe0b2;
+}

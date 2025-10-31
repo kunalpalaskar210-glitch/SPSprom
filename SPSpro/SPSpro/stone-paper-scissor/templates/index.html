@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stone Paper Scissors</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Stone Paper Scissors</h1>
+
+    <form method="POST">
+        <button type="submit" name="choice" value="Stone">Stone</button>
+        <button type="submit" name="choice" value="Paper">Paper</button>
+        <button type="submit" name="choice" value="Scissors">Scissors</button>
+    </form>
+
+    {% if result %}
+        <p>You chose: {{ player_choice }}</p>
+        <p>Computer chose: {{ computer_choice }}</p>
+        <h3>Result: {{ result }}</h3>
+    {% endif %}
+
+    <form method="POST">
+        <button type="submit" name="reset">Reset Scores</button>
+    </form>
+
+    <h2>Scoreboard</h2>
+    <table>
+        <tr>
+            <th>Player</th>
+            <th>Computer</th>
+            <th>Result</th>
+        </tr>
+        {% for row in scores %}
+        <tr>
+            <td>{{ row["Player"] }}</td>
+            <td>{{ row["Computer"] }}</td>
+            <td>{{ row["Result"] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
